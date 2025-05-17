@@ -109,7 +109,7 @@ const nctx = nextShapeCanvas.getContext("2d");
 const sctx = scoreCanvas.getContext("2d");
 const squareCountX = canvas.width / size;
 const squareCountY = canvas.height / size;
-const whiteLineThickness = 4;
+const whiteLineThickness = 2;
 
 const shapes = [
   new Block(0, 120, [
@@ -299,15 +299,16 @@ let drawNextShape = () => {
 
 let drawScore = () => {
   sctx.clearRect(0, 0, scoreCanvas.width, scoreCanvas.height);
-  sctx.font = "20px Poppins";
+  sctx.font = "bold 20px 'VT323'";
   sctx.fillStyle = "black";
-  sctx.fillText(score, 10, 50);
+  sctx.fillText(score, scoreCanvas.width / 2 - sctx.measureText(score.toString()).width / 2, scoreCanvas.height / 2);
 }
 
 let drawGameOver = () => {
-  ctx.font = "20px Poppins";
-  ctx.fillStyle = "black";
-  ctx.fillText("GameOver!", 10, canvas.height / 2);
+  ctx.font = "bold 30px 'VT323'";
+  ctx.fillStyle = "red";
+  let message = "Game Over!";
+  ctx.fillText(message, canvas.width / 2 - ctx.measureText(message).width / 2, canvas.height / 2 - ctx.measureText(message).height / 2);
 }
 
 let draw = () => {

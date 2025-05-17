@@ -1,0 +1,83 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #222831, #393E46);
+  color: white;
+}
+
+/* Center the game-wrapper */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Game wrapper centered */
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* canvas + side panel side by side */
+.canvas-group {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  background: #2c2f3f;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Canvases */
+#canvas,
+#nextShapeCanvas,
+#scoreCanvas {
+  background-color: #eeeeee;
+  border-radius: 5px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Side panel: stacked vertically */
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Smaller reset button */
+.reset-button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background-color: #bca0dc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #a586d5;
+}
+
+.reset-button:active {
+  background-color: #9969d0;
+}
+
+.reset-button svg {
+  fill: #ffffff;
+}
