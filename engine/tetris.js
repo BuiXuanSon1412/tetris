@@ -308,7 +308,7 @@ let drawGameOver = () => {
   ctx.font = "bold 30px 'VT323'";
   ctx.fillStyle = "red";
   let message = "Game Over!";
-  ctx.fillText(message, canvas.width / 2 - ctx.measureText(message).width / 2, canvas.height / 2 - ctx.measureText(message).height / 2);
+  ctx.fillText(message, canvas.width / 2 - ctx.measureText(message).width / 2, canvas.height / 2);
 }
 
 let draw = () => {
